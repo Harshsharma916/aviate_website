@@ -1,9 +1,9 @@
-$font1_desktop: 17px;
-$font1_mobile:12px;
+$font1_desktop:16px;
+$font1_mobile:14px;
 $font2_desktop:15px;
 $font2_mobile:10px;
 $image_deskstop:80px;
-$image_mobile:50px;
+$image_mobile:40px;
 
 .card{
   width: 400px !important;
@@ -51,6 +51,32 @@ $image_mobile:50px;
       }
       .logo{
         width: 25%;
+      }
+    }
+  }
+}
+
+@media(max-width:480px){
+  .card{
+    width: 300px !important;
+    height: 300px !important;
+    padding: 35px 20px;
+
+    .info{
+      font-size: $font1_mobile;
+    }
+    .details{
+      .img{
+        width: $image_mobile;
+        height: $image_mobile;
+      }
+      .company{
+        .name{
+          font-size: $font1_mobile;
+        }
+        .designation{
+          font-size: $font2_mobile;
+        }
       }
     }
   }

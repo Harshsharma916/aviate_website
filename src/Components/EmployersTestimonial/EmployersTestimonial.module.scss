@@ -1,13 +1,23 @@
-$heading:38px;
+$font1_desktop: 35px;
+$font1_mobile: 28px;
 
-.employersTestimonial{
+.employersTestimonial {
   padding: 5% 12%;
 
   .heading {
     margin-bottom: 5%;
-    font-size: $heading;
+    font-size: $font1_desktop;
     font-weight: 600;
     color: #3c3f51;
     text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .employersTestimonial {
+    padding: 10%;
+    .heading {
+      font-size: $font1_mobile;
+    }
   }
 }

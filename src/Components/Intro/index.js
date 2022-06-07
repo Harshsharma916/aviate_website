@@ -17,7 +17,7 @@ const Intro = () => {
             <button className={style.button_2}>Hire from us</button>
           </div>
         </div>
-        <img className={style.intro_image} />
+        {/* <img className={style.intro_image} /> */}
       </div>
     </div>
   );

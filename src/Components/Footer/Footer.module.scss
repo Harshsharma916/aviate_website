@@ -1,71 +1,115 @@
-$infoText1:16px;
-$infoText2:12px;
+$font1_desktop: 16px;
+$font1_mobile: 12px;
+$font2_desktop: 20px;
+$font2_mobile: 14px;
+$font3_desktop: 14px;
+$font3_mobile: 10px;
+$logo_desktop: 150px;
+$logo_mobile: 100px;
 
-.footer{
+.footer {
   background-color: rgb(13, 24, 44);
 
-  .content{
+  .content {
     padding: 5% 15%;
     display: flex;
     flex-direction: column;
     gap: 10px;
 
-    .logo{
-      width: 150px;
+    .logo {
+      width: $logo_desktop;
     }
-    .info{
+    .info {
       display: flex;
       gap: 50px;
 
-      .about{
+      .about {
         display: flex;
         flex-direction: column;
         gap: 20px;
 
-        .about_text{
-          font-size: $infoText1;
+        .about_text {
+          font-size: $font1_desktop;
           font-weight: 300;
           color: white;
         }
-        .about_buttons{
+        .about_buttons {
           display: flex;
           gap: 10px;
 
-          button{
+          button {
             border: 1px solid white;
             padding: 10px;
             color: white;
             background: transparent;
+            font-size: $font3_desktop;
           }
         }
       }
 
-      .address{
+      .address {
         display: flex;
         flex-direction: column;
         gap: 5px;
 
-        .address_text{
-          font-size: $infoText1;
+        .address_text {
+          font-size: $font1_desktop;
           font-weight: 300;
           color: white;
         }
-        .email{
-          font-size: 20px;
+        .email {
+          font-size: $font2_desktop;
           font-weight: 300;
           color: white;
-          text-decoration:underline;
+          text-decoration: underline;
         }
       }
     }
   }
 
-  .copyright{
+  .copyright {
     background-color: rgb(11, 21, 39);
     text-align: center;
     padding: 10px 0px;
-    font-size: 14px;
+    font-size: $font3_desktop;
     font-weight: 300;
     color: white;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    .content {
+      padding: 10%;
+      .logo {
+        width: $logo_mobile;
+      }
+      .info {
+        gap: 20px;
+        .about {
+          gap: 10px;
+          .about_text {
+            font-size: $font1_mobile;
+          }
+          .about_buttons {
+            button {
+              padding: 5px;
+              font-size: $font3_mobile;
+            }
+          }
+        }
+        .address {
+          .address_text {
+            font-size: $font1_mobile;
+          }
+          .email {
+            font-size: $font2_mobile;
+          }
+        }
+      }
+    }
+    .copyright {
+      font-size: $font3_mobile;
+    }
   }
 }

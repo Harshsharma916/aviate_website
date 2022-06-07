@@ -1,10 +1,12 @@
-$heading:38px;
+$font1_desktop: 35px;
+$font1_mobile: 28px;
+$weight1_desktop: 600;
 
-.jobseekersTestimonial{
+.jobseekersTestimonial {
   padding: 5% 0px;
   display: flex;
   justify-content: center;
-  background-color: rgb(19,35,62);
+  background-color: rgb(19, 35, 62);
   overflow: hidden;
   position: relative;
 
@@ -29,10 +31,9 @@ $heading:38px;
     height: 20%;
     background-color: #6484b721;
     transform: rotate(50deg);
-
   }
 
-  .content{
+  .content {
     z-index: 1;
     display: flex;
     flex-direction: column;
@@ -40,10 +41,22 @@ $heading:38px;
     align-items: center;
 
     .heading {
-      font-size: $heading;
+      font-size: $font1_desktop;
       font-weight: 600;
       color: #6484b7;
       margin-bottom: 5%;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .jobseekersTestimonial {
+    padding: 10% 0px;
+    .content {
+      width: 90%;
+      .heading {
+        font-size: $font1_mobile;
+      }
     }
   }
 }

@@ -1,18 +1,23 @@
-$headingSize:45px;
-$headingWeight: 600;
-$infoSize:25px;
-$infoWeight:300;
+$font1_desktop: 45px;
+$font1_mobile: 35px;
+$weight1_desktop: 600;
+$weight1_mobile: 500;
+$font2_desktop: 25px;
+$font2_mobile: 18px;
+$weight2_desktop: 300;
+$font3_desktop: 16px;
+$font3_mobile: 14px;
 
-.intro{
+.intro {
   position: relative;
-  background-color: rgb(19,35,62);
+  background-color: rgb(19, 35, 62);
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
 
-  &::before{
+  &::before {
     content: "";
     position: absolute;
     left: -22%;
@@ -22,7 +27,7 @@ $infoWeight:300;
     opacity: 0.5;
     transform: rotate(45deg);
   }
-  &::after{
+  &::after {
     content: "";
     position: absolute;
     background-color: rgb(14, 27, 48);
@@ -31,71 +36,90 @@ $infoWeight:300;
     width: 100%;
     height: 100%;
     transform: rotate(60deg);
-  } 
+  }
 }
 
-.content{
+.content {
   display: flex;
   gap: 80px;
   position: absolute;
   z-index: 2;
 
-  .intro_text{
+  .intro_text {
     display: flex;
     flex-direction: column;
     gap: 30px;
-    // color: rgb(146, 171, 207);
     color: white;
     width: 500px;
 
-    .heading{
-      font-size: $headingSize;
-      font-weight: $headingWeight;
+    .heading {
+      font-size: $font1_desktop;
+      font-weight: $weight1_desktop;
       letter-spacing: 1px;
     }
-    .info{
-      font-size: $infoSize;
-      font-weight: $infoWeight;
+    .info {
+      font-size: $font2_desktop;
+      font-weight: $weight2_desktop;
     }
   }
-  .intro_buttons{
+  .intro_buttons {
     display: flex;
     gap: 20px;
-    
-    button{
-      font-size: 16px;
+
+    button {
+      font-size: $font3_desktop;
       font-weight: 700;
       text-transform: uppercase;
       text-decoration: none;
-      border: none;
       letter-spacing: 1px;
       padding: 20px 40px;
       border-radius: 50px 50px 50px 50px;
       transition: all 0.4s ease;
       border: 1px solid rgb(17, 236, 229);
       cursor: pointer;
-      
-      &:hover{
-        border: 2px solid  white;
-        // color: rgb(17, 207, 236);
+
+      &:hover {
+        border: 2px solid white;
         color: white;
       }
     }
 
-    .button_1{
+    .button_1 {
       background-color: rgb(17, 236, 229);
       color: black;
 
       &:hover {
         background-color: transparent;
-      } 
+      }
     }
 
-    .button_2{
+    .button_2 {
       border: 1px solid rgb(17, 236, 229);
       background-color: transparent;
       color: rgb(17, 236, 229);
     }
   }
+}
 
+//media
+
+@media (max-width: 480px) {
+  .content {
+    width: 80%;
+    .intro_text {
+      .heading {
+        font-size: $font1_mobile;
+        // font-weight: $weight1_mobile;
+      }
+      .info{
+        font-size: $font2_mobile;
+      }
+    }
+    .intro_buttons{
+      button{
+        font-size: $font3_mobile;
+        padding: 10px 20px;
+      }
+    }
+  }
 }

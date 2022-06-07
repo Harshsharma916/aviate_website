@@ -1,6 +1,11 @@
+$font1_desktop: 30px;
+$font1_mobile: 24px;
+$font2_desktop: 20px;
+$font2_mobile: 16px;
+
 .card {
   display: flex;
-  align-items:center;
+  align-items: center;
   justify-content: space-between;
 
   .img {
@@ -18,14 +23,31 @@
     width: 50%;
 
     .heading {
-      font-size: 34px;
+      font-size: $font1_desktop;
       font-weight: 600;
       letter-spacing: 1px;
     }
 
     .info {
-      font-size: 20px;
+      font-size: $font2_desktop;
       font-weight: 300;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    .img {
+      height: 120px;
+      border-radius: 30px;
+    }
+    .content {
+      .heading {
+        font-size: $font1_mobile;
+      }
+      .info {
+        font-size: $font2_mobile;
+      }
     }
   }
 }
