@@ -10,7 +10,7 @@ const Header = () => {
   const isMobile = useMediaQuery({ query: "(max-width: 480px)" });
 
   return (
-    <div className={style.header} id="header">
+    <div className={style.header}>
       <img src={logo} className={style.logo} alt="logo" />
       {isMobile && (
         <MenuOutlined
@@ -20,15 +20,17 @@ const Header = () => {
       )}
       {(!isMobile || hamburgerClicked) && (
         <div className={style.menu}>
-          <div className={style.options}>
-            <Link to="header">Home</Link>
-          </div>
-          <div className={style.options}>
-            <Link to="for_employers">For Employers</Link>
-          </div>
-          <div className={style.options}>
-            <Link to="footer">Contact Us</Link>
-          </div>
+          <Link to="home">
+            <div className={style.options}>Home</div>
+          </Link>
+
+          <Link to="for_employers">
+            <div className={style.options}>For Employers</div>
+          </Link>
+
+          <Link to="footer">
+            <div className={style.options}>Contact Us</div>
+          </Link>
         </div>
       )}
     </div>

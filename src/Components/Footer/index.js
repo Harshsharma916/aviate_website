@@ -3,7 +3,7 @@ import logo from "../../Assets/images/aviate.png";
 
 export default function Footer() {
   return (
-    <div className={style.footer}>
+    <div className={style.footer} id="footer">
       <div className={style.content}>
         <img src={logo} className={style.logo}/>
         <div className={style.info}>
