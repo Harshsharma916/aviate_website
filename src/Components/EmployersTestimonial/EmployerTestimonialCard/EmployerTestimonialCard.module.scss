@@ -1,0 +1,57 @@
+$font1_desktop: 17px;
+$font1_mobile:12px;
+$font2_desktop:15px;
+$font2_mobile:10px;
+$image_deskstop:80px;
+$image_mobile:50px;
+
+.card{
+  width: 400px !important;
+  height: 400px !important;
+  padding: 50px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: white !important;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.05);
+  border-radius: 50px;
+  align-items: center;
+
+  .info{
+    font-size: $font1_desktop;
+    color: #5d627d;
+    font-weight: 500;
+  }
+
+  .details{
+    display: flex;
+    gap: 10px;
+
+    .img{
+      width: $image_deskstop;
+      height: $image_deskstop;
+      border-radius: 50%;
+    }
+
+    .company{
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+
+      .name{
+        font-size: $font1_desktop;
+        color: #3c3f51;
+        font-weight: 500;
+      }
+
+      .designation{
+        font-size: $font2_desktop;
+        color: #5d627d;
+        font-weight: 500;
+      }
+      .logo{
+        width: 25%;
+      }
+    }
+  }
+}

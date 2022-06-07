@@ -1,0 +1,71 @@
+$infoText1:16px;
+$infoText2:12px;
+
+.footer{
+  background-color: rgb(13, 24, 44);
+
+  .content{
+    padding: 5% 15%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .logo{
+      width: 150px;
+    }
+    .info{
+      display: flex;
+      gap: 50px;
+
+      .about{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .about_text{
+          font-size: $infoText1;
+          font-weight: 300;
+          color: white;
+        }
+        .about_buttons{
+          display: flex;
+          gap: 10px;
+
+          button{
+            border: 1px solid white;
+            padding: 10px;
+            color: white;
+            background: transparent;
+          }
+        }
+      }
+
+      .address{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        .address_text{
+          font-size: $infoText1;
+          font-weight: 300;
+          color: white;
+        }
+        .email{
+          font-size: 20px;
+          font-weight: 300;
+          color: white;
+          text-decoration:underline;
+        }
+      }
+    }
+  }
+
+  .copyright{
+    background-color: rgb(11, 21, 39);
+    text-align: center;
+    padding: 10px 0px;
+    font-size: 14px;
+    font-weight: 300;
+    color: white;
+  }
+}

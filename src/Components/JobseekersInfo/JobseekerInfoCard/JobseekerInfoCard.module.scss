@@ -1,0 +1,31 @@
+.card {
+  display: flex;
+  align-items:center;
+  justify-content: space-between;
+
+  .img {
+    width: 40%;
+    height: 300px;
+    border: 1px solid rgb(19, 35, 62);
+    object-fit: contain;
+    border-radius: 50px;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 50%;
+
+    .heading {
+      font-size: 34px;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+
+    .info {
+      font-size: 20px;
+      font-weight: 300;
+    }
+  }
+}
