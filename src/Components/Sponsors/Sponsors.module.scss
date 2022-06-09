@@ -1,0 +1,87 @@
+$font1_desktop: 35px;
+$font1_mobile: 28px;
+$font2_desktop: 25px;
+$font2_mobile: 18px;
+$font3_desktop: 16px;
+$font3_mobile: 14px;
+
+.sponsors {
+  padding: 5% 15% !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+//   background-color: hsla(220, 81.8%, 97.8%, 1);
+}
+
+.heading {
+  font-size: $font1_desktop;
+  font-weight: 600;
+  color: #3c3f51;
+  text-align: center;
+  margin-bottom: 5%;
+}
+
+.logo {
+  display: flex !important;
+  width: 200px !important;
+
+  .logo_img{
+      width: 150px;
+  }
+}
+
+.promotion{
+    position:absolute;
+    top: 40%;
+    right: 12%;
+    padding: 30px 40px;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 50px;
+
+    p{
+        font-size: $font2_desktop;
+        margin-bottom: 5%;
+        color: #3c3f51;
+    }
+    button {
+        font-size: $font3_desktop;
+        font-weight: 700;
+        text-transform: uppercase;
+        text-decoration: none;
+        letter-spacing: 1px;
+        padding: 15px 30px;
+        border-radius: 50px;
+        transition: all 0.4s ease;
+        cursor: pointer;
+        border: 1px solid rgb(19, 35, 62);
+        background-color: transparent;
+        color: rgb(19, 35, 62);
+  
+        &:hover {
+          border: 1px solid rgb(70, 90, 126);
+          color: rgb(70, 90, 126);
+        }
+      }
+}
+
+@media(max-width:480px){
+    .sponsors{
+        padding: 10% !important;
+    }
+    .heading{
+        font-size: $font1_mobile;
+    }
+    .promotion{
+        position: relative;
+        top: 0;
+        right: 0;
+        margin: 5% 0px;
+        p{
+            font-size: $font2_mobile;
+        }
+        button{
+            font-size: $font3_mobile;
+        }
+    }
+}

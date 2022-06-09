@@ -4,6 +4,7 @@ import Header from "./Components/Header";
 import Intro from "./Components/Intro";
 import JobseekersInfo from "./Components/JobseekersInfo";
 import JobseekersTestimonial from "./Components/JobseekersTestimonial";
+import Sponsors from "./Components/Sponsors";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <JobseekersInfo/>
       <JobseekersTestimonial/>
       <EmployersTestimonial/>
+      <Sponsors/>
       <Footer/>
     </>
   );
