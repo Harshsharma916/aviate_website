@@ -7,10 +7,22 @@ import logo from "../../Assets/images/aviate-logo.png";
 
 const Header = () => {
   const [hamburgerClicked, setHamburgerClicked] = useState(false);
+  const [navbar,setNavbar] = useState({background:"transparent"});
   const isMobile = useMediaQuery({ query: "(max-width: 480px)" });
 
+  function changeNavbarBg(){
+    let scrollVal = window.scrollY;
+    if(scrollVal>20){
+      setNavbar({background:"rgb(21, 36, 60)"})
+    }else{
+      setNavbar({background:"transparent"})
+    }
+  }
+
+  window.addEventListener("scroll",changeNavbarBg)
+
   return (
-    <div className={style.header}>
+    <div className={style.header} style={navbar}>
       <img src={logo} className={style.logo} alt="logo" />
       {isMobile && (
         <MenuOutlined
